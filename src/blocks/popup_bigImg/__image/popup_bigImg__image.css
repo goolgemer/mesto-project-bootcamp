@@ -1,0 +1,11 @@
+.popup_bigImg__image {
+  max-width: 75vw;
+  max-height: 75vh;
+  margin: 0;
+  bottom: 0;
+
+}
+
+.popup_bigimg {
+  background-color: rgba(0, 0, 0, 0.9);
+}

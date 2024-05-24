@@ -1,0 +1,17 @@
+.photo-grid {
+  display: grid;
+  width: calc(100% - 284px);
+  max-width: 880px;
+  margin: 51px auto 66px;
+  justify-content: center;
+  font-size: 0;
+  grid-template-columns: repeat(auto-fill, 282px);
+  grid-template-rows: auto;
+  grid-gap: 20px 17px;
+}
+
+@media screen and (max-width: 980px) {
+  .photo-grid {
+    margin: 36px auto 48px;
+  }
+}

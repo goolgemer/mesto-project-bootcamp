@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Место</title>
+</head>
+
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="<%=require('./images/Logo.svg')%>" alt="Лого Место"/>
+  </header>
+  <main class="main">
+    <section class="profile">
+      <div class="profile__avatar-container">
+        <img src="#" alt="Аватар" class="profile__avatar" />
+        <div class="profile__avatar-overlay">
+          <button type="button" class="profile__btn-edit"></button>
+        </div>
+      </div>
+
+      <div class="profile__info">
+        <h1 class="profile__name"></h1>
+        <p class="profile__about"></p>
+        <button type="button" class="profile__edit" aria-label="редактировать профиль"></button>
+      </div>
+      <button type="button" class="profile__add" aria-label="добавить фото"></button>
+    </section>
+    <section class="photo-grid">
+      <template id="photo-item">
+        <div class="photo-grid__element">
+          <img class="photo-grid__img" src="#" alt="" />
+          <button type="button" class="photo-grid__delete" id="del">Удалить</button>
+          <div class="photo-grid__info">
+            <h2 class="photo-grid__title"></h2>
+            <div class="photo-grid__like-container">
+              <button type="button" class="photo-grid__like"></button>
+              <div class="photo-grid__like-counter"></div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
+  </footer>
+  <div class="popup popup_edit">
+    <div class="popup__container">
+      <button type="button" class="popup__close">
+      </button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form name="profile" class="popup__form" novalidate>
+        <fieldset class="popup__form-fieldest">
+          <input name="name" id="popup-input-name" type="text" class="popup__input popup__input_type_name"
+            placeholder="Имя" minlength="2" maxlength="40" pattern="^[A-Za-zА-Яа-яЁё\s\D]+$" required />
+          <span class="popup__input-error popup-input-name-error"></span>
+          <input name="about" id="popup-input-about" value="Исследователь океана" type="text"
+            class="popup__input popup__input_type_about" placeholder="О себе" minlength="2" maxlength="200"
+            pattern="^[A-Za-zА-Яа-яЁё\s\D]+$" required />
+          <span class="popup__input-error popup-input-about-error"></span>
+        </fieldset>
+        <button type="submit" class="popup__submit popup-profile-submit" >
+          Сохранить
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_image">
+    <div class="popup__container">
+      <button type="button" class="popup__close">
+      </button>
+      <h2 class="popup__title">Новое место</h2>
+      <form name="Image" class="popup__form popup-image__form" novalidate>
+        <fieldset class="popup__form-fieldest">
+          <input name="place-name" value="" id="popup-input-img-title" placeholder="Название" type="text"
+            class="popup__input popup__input_place-name" minlength="2" maxlength="30" pattern="^[A-Za-zА-Яа-яЁё\s\D]+$"
+            required />
+          <span class="popup__input-error popup-input-img-title-error"></span>
+          <input name="place-link" value="" id="popup-input-img-link" placeholder="Ссылка на картинку" type="url"
+            class="popup__input popup__input_place-link" required />
+          <span class="popup__input-error popup-input-img-link-error"></span>
+        </fieldset>
+        <button type="submit" class="popup__submit popup-card-submit popup__submit_disabled">
+          Создать
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_bigImg">
+    <div class="popup_bigImg__container">
+      <button type="button" class="popup__close">
+      </button>
+      <figure class="popup_bigImg__figure">
+        <img class="popup_bigImg__image" src="#" alt="" />
+        <figcaption class="popup_bigImg__capture"></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="popup popup__edit_avatar">
+    <div class="popup__container">
+      <button type="button" class="popup__close">
+      </button>
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form name="Image" class="popup__form popup-avatar__form" novalidate>
+        <fieldset class="popup__form-fieldest">
+          <input name="place-link" value="" id="popup-input-img-link" placeholder="Ссылка на картинку" type="url"
+            class="popup__input popup__input_avatar" required />
+          <span class="popup__input-error popup-input-img-link-error"></span>
+        </fieldset>
+        <button type="submit" class="popup__submit popup__submit_disabled popup__submit_avt">
+          Сохранить
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

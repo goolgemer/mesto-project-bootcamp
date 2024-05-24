@@ -1,0 +1,7 @@
+.popup_bigImg_opened {
+    display: flex;
+}
+
+.popup_bigImg_opened::before {
+    background-color: rgba(0, 0, 0, 0.9)
+}

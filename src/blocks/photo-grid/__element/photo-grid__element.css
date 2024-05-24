@@ -1,0 +1,10 @@
+.photo-grid__element {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-self: center;
+  position: relative;
+}

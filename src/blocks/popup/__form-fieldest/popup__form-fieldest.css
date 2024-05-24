@@ -1,0 +1,14 @@
+.popup__form-fieldest {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 358px;
+  margin-bottom: 23px;
+}
+
+@media screen and (max-width: 650px) {
+  .popup__form-fieldest {
+    width: 238px;
+    margin-bottom: 23px;
+  }
+}
